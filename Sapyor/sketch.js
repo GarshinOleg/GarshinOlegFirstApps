@@ -6,7 +6,7 @@ let horizontal = 0,
   metka = 0;
 let str = 'Чтобы проверить поле на наличие мин нажмите \nПРОБЕЛ, отметить место предполагаемого размещения бомбы - \nнажмите Ctrl',
   str2 = 'Осталось отметить бомб: ';
-let r = 0.1; //меняя r меняем количество бомб на поле; чем больше, тем бомб больше; 0=ноль бомб
+let r = 0.03; //меняя r меняем количество бомб на поле; чем больше, тем бомб больше; 0=ноль бомб
 let kDRAW = 0; //счетчик бомб в kDRAW
 
 function setup() {
@@ -53,7 +53,7 @@ function setup() {
     }
   }
   metka = numbomb;
-
+ //noLoop();
 }
 
 function draw() {
@@ -207,7 +207,7 @@ function mousePressed() {
     if (mouseButton === LEFT) {
       if (field[round(mouseY / 50 - 0.5)][round(mouseX / 50 - 0.5)].bomb < 0) {
         field[round(mouseY / 50 - 0.5)][round(mouseX / 50 - 0.5)].color = "red";
-        str = 'Вы проиграли =(';
+        str = 'Вы проиграли, ' +Imya.innerHTML+' =(';
       } else {
         saper2(round(mouseY / 50 - 0.5), round(mouseX / 50 - 0.5));
       }
@@ -224,9 +224,69 @@ function mousePressed() {
         if ((field[round(mouseY / 50 - 0.5)][round(mouseX / 50 - 0.5)].bomb < 0) && (field[round(mouseY / 50 - 0.5)][round(mouseX / 50 - 0.5)].color === "yellow")) win++;
       }
     } 
-    if (numbomb === win && metka === 0) str = 'Вы победили!';
+    if (numbomb === win && metka === 0) str = 'Вы победили, '+Imya.innerHTML+'!';
     fill(255, 255, 0);
     textSize(15);
     text(str2 + win, 5, 472);
   }
 }
+
+function yourname(){
+  Imya.innerHTML = vvod.value;
+}
+
+function level(){ let k=0.01;
+  Imya2.innerHTML = vvod2.value;
+  //если текст в поле ввода можно преобразовать в число
+  if (!isNaN(Number(vvod2.value))){ 
+  if (vvod2.value==="1") k=0.05;
+  if (vvod2.value==="2") k=0.2;
+  if (vvod2.value==="3") k=0.5;
+    createCanvas(400, 500);
+  //frameRate(1);
+  for (let column = 0; column < 8; column++) {
+    field[column] = [];
+    for (let row = 0; row < 8; row++) {
+      if ((column + row) % 2 === 0) {
+        field[column][row] = {
+          color: 'black',
+          bomb: random(-k*r, r),
+          kolvorydom: 0,
+          pokaz: open,
+          otkr: 0
+        };
+      } else {
+        field[column][row] = {
+          color: 'white',
+          bomb: random(-k*r, r),
+          kolvorydom: 0,
+          pokaz: open,
+          otkr: 0
+        };
+      }
+    }
+  }
+
+  //Сколько всего бомб и записываем сколько бомб рядом?
+    numbomb=0;
+  for (let column = 0; column < 8; column++) {
+    for (let row = 0; row < 8; row++) {
+      if (field[column][row].bomb < 0) {
+        field[column][row].pokaz = close;
+        plusodin(column - 1, row - 1);
+        plusodin(column, row - 1);
+        plusodin(column + 1, row - 1);
+        plusodin(column - 1, row);
+        plusodin(column + 1, row);
+        plusodin(column - 1, row + 1);
+        plusodin(column, row + 1);
+        plusodin(column + 1, row + 1);
+        numbomb++;
+      }
+    }
+  }
+  metka = numbomb;
+  }
+}
+
+
