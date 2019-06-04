@@ -1,6 +1,6 @@
 let i = 200,
   di = 5,
-    du=1,
+  du = 1,
   u = 10;
 
 function setup() {
@@ -11,7 +11,7 @@ function setup() {
 
 function draw() {
   background(230, 230, 250);
-  translate(width / 2, height / 2 );
+  translate(width / 2, height / 2);
   scale(1, -1);
   //strokeWeight(1);
   i = i + di;
@@ -28,7 +28,7 @@ function draw() {
   fractal(0, 0, i, 0);
   rotate(radians(90));
   fractal(0, 0, i, 0);
-  
+
   push();
   rotate(radians(45));
   fractal(0, 0, i, 0);
@@ -47,11 +47,11 @@ function draw() {
   pop();
 }
 
-function fractal(x, y, a,u) {
+function fractal(x, y, a, u) {
   if (a > 3) {
     rotate(radians(u));
     line(x, y, x, a);
-    
+
     //нижние веточки
     push();
     translate(0, a / 4);
@@ -65,23 +65,23 @@ function fractal(x, y, a,u) {
     pop();
     //средние веточки
     push();
-    translate(0, a*0.5);
+    translate(0, a * 0.5);
     rotate(radians(45));
     fractal(x, y, a / 3, u);
     pop();
     push();
-    translate(0, a*0.5);
+    translate(0, a * 0.5);
     rotate(radians(-45));
     fractal(x, y, a / 3, u);
     pop();
     //верхние веточки
     push();
-    translate(0, a*0.75);
+    translate(0, a * 0.75);
     rotate(radians(45));
     fractal(x, y, a / 4, u);
     pop();
     push();
-    translate(0, a*0.75);
+    translate(0, a * 0.75);
     rotate(radians(-45));
     fractal(x, y, a / 4, u);
     pop();
