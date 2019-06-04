@@ -24,7 +24,7 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-[https://garshinoleg.github.io/Sapyor/](url) - проект с игрой "Сапёр"
+[Сапёр](https://garshinoleg.github.io/Sapyor/ "Ссылка на запуск игры запёр") - проект с игрой "Сапёр"
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
