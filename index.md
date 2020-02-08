@@ -5,6 +5,7 @@
 [Vito_Technology_Test](https://garshinoleg.github.io/vito_technology/public/ "Ссылка запустит проект с тестовым заданием") 
 > - проект с тестовым заданием, использующий React
 
+Проект по JavaScript-анимации:
 * Использование рекурсии:
 [Сапёр](https://garshinoleg.github.io/Sapyor/ "Ссылка запустит игру Сапёр") 
 > - проект с игрой "Сапёр", использующий рекурсивные функции
