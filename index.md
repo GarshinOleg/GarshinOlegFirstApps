@@ -2,7 +2,7 @@
 Ссылки на выполненные проекты:
 
 * Выполнение тестового задания от Vito_technology:
-[Vito_Technology_Test](https://garshinoleg.github.io/vito_technology/public/ "Ссылка запустит проект с тестовым заданием") 
+[Vito_Technology_Test](https://garshinoleg.github.io/vito_technology/build/ "Ссылка запустит проект с тестовым заданием") 
 > - проект с тестовым заданием, использующий React
 
 Проекты по JavaScript-анимации:
