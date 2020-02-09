@@ -1,9 +1,9 @@
-## Сайт Гаршина Олега
-Ссылки на выполненные проекты:
+## Site of Garshin Oleg
+Links to completed projects:
 
-* Выполнение тестового задания от Vito_technology:
-[Vito_Technology_Test](https://garshinoleg.github.io/vito_technology/build/ "Ссылка запустит проект с тестовым заданием") 
-> - проект с тестовым заданием, использующий React
+* Test from Vito_technology:
+[Vito_Technology_Test](https://garshinoleg.github.io/vito_technology/build/ " Link will launch a project with a test task") 
+> - test project using React
 
 Проекты по JavaScript-анимации:
 * Использование рекурсии:
