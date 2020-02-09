@@ -1,4 +1,4 @@
-## Site of Garshin Oleg
+## Garshin's Oleg website
 Links to completed projects:
 
 * Test from Vito_technology:
